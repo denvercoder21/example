@@ -9,11 +9,15 @@ add_executable(example-lib-test
     example_lib_test.cpp
 )
 
-find_package(GTest CONFIG REQUIRED)
-# include(GoogleTest)
+find_package(GTest REQUIRED)
+if (GTEST_FOUND)
+    message("Found GoogleTest")
+else()
+    message("GoogleTest not found")
+endif()
 
 target_link_libraries(example-lib-test PRIVATE  example-lib
-                                                GTest::gtest
-                                                GTest::gtest_main)
+                                                GTest::GTest
+                                                GTest::Main)
 
 gtest_discover_tests(example-lib-test)
