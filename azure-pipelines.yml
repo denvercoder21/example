@@ -16,5 +16,5 @@ steps:
     ./vcpkg/vcpkg install gtest
     mkdir build
     cd build/
-    cmake ..
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
     make
