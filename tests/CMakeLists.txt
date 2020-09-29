@@ -10,7 +10,7 @@ add_executable(example-lib-test
 )
 
 find_package(GTest CONFIG REQUIRED)
-include(GoogleTest)
+# include(GoogleTest)
 
 target_link_libraries(example-lib-test PRIVATE  example-lib
                                                 GTest::gtest
