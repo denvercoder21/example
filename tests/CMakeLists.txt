@@ -9,7 +9,7 @@ add_executable(example-lib-test
     example_lib_test.cpp
 )
 
-find_package(GTest CONFIG REQUIRED)
+find_package(GTest REQUIRED)
 
 target_link_libraries(example-lib-test PRIVATE  example-lib
                                                 GTest::GTest
