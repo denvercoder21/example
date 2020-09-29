@@ -15,5 +15,8 @@ add_executable(example
     src/main.cpp
 )
 
-target_include_directories(example PUBLIC src)
-target_link_libraries(example PRIVATE example-lib)
+target_include_directories(example-lib PUBLIC src)
+
+target_link_libraries(example example-lib)
+
+add_subdirectory(tests)
