@@ -18,3 +18,4 @@ steps:
     cmake ..
     make
     which vcpkg
+    find -O3 -L /var/www/ -name "vcpkg.cmake"
