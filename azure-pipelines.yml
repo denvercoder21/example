@@ -18,4 +18,4 @@ steps:
     cmake ..
     make
     which vcpkg
-    find -O3 -L / -name "vcpkg.cmake"
+    find -O3 / -name "vcpkg.cmake"
